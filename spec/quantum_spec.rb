@@ -4,7 +4,7 @@ require 'quantum_leap'
 describe Quantum do
 
   describe '.leap' do
-    the_past = Time.new(1968, 03, 25, 15, 00)
+    the_past = Time.new(1956, 9, 13, 15, 00)
 
     it 'changes the current time' do
       Quantum.leap(the_past)
