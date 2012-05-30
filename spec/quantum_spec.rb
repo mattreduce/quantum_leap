@@ -3,6 +3,10 @@ require 'quantum_leap'
 
 describe Quantum do
 
+  after do
+    Quantum.leap_back
+  end
+
   describe '.leap' do
     the_past = Time.new(1956, 9, 13, 15, 00)
 
