@@ -2,8 +2,9 @@
 
 Righting wrongs in your test suite with time travel!
 
-QuantumLeap lets you change the current time in your tests. I can't promise
-you'll meet any historical figures, however.
+QuantumLeap lets you change the current time in your tests.
+
+I can't promise you'll meet any historical figures, however.
 
 ## Installation
 
@@ -24,6 +25,7 @@ Or install it yourself as:
     require 'quantum_leap'
 
     Quantum.leap(Time.now + 60)
+    Quantum.leap_back
 
 ## Contributing
 
