@@ -21,7 +21,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'quantum_leap'
+
+    Quantum.leap(Time.now + 60)
 
 ## Contributing
 
