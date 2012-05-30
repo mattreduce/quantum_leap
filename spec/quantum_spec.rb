@@ -8,7 +8,7 @@ describe Quantum do
   end
 
   describe '.leap' do
-    the_past = Time.new(1956, 9, 13, 15, 00)
+    let(:the_past) { Time.new(1956, 9, 13, 15, 00) }
 
     it 'changes the current time' do
       Quantum.leap(the_past)
@@ -17,8 +17,8 @@ describe Quantum do
   end
 
   describe '.leap_back' do
-    the_present = Time.new
-    the_past    = Time.new(1972, 6, 15, 15, 00)
+    let(:the_present) { Time.new }
+    let(:the_past)    { Time.new(1972, 6, 15, 15, 00) }
 
     it 'returns to the present time' do
       Quantum.leap(the_past)
