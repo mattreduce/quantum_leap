@@ -9,8 +9,8 @@ describe Quantum do
 
   describe '.leap' do
     describe 'without a block' do
-      let(:the_present) { Time.new }
-      let(:the_past)    { Time.new(1956, 9, 13, 15, 00) }
+      the_present = Time.new
+      the_past    = Time.new(1956, 9, 13, 15, 00)
 
       it 'changes the current time' do
         Quantum.leap(the_past)
@@ -19,8 +19,8 @@ describe Quantum do
     end
 
     describe 'with a block' do
-      let(:the_present) { Time.new }
-      let(:the_past)    { Time.new(1974, 10, 24, 15, 00) }
+      the_present = Time.new
+      the_past    = Time.new(1974, 10, 24, 15, 00)
 
       it 'changes time only within the block' do
         Quantum.leap(the_past) do
@@ -32,8 +32,8 @@ describe Quantum do
   end
 
   describe '.leap_back' do
-    let(:the_present) { Time.new }
-    let(:the_past)    { Time.new(1972, 6, 15, 15, 00) }
+    the_present = Time.new
+    the_past    = Time.new(1972, 6, 15, 15, 00)
 
     it 'returns to the present time' do
       Quantum.leap(the_past)
