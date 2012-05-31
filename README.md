@@ -24,14 +24,14 @@ Or install it yourself as:
 
     require 'quantum_leap'
 
-    Quantum.leap(Time.new(1956, 9, 13, 15, 00))
+    Quantum.leap(Time.new(1956, 9, 13))
     sam.must_be_kind_of(Pilot)
     sam.must_win_baseball_game
     Quantum.leap_back
 
 Or with a block:
 
-    Quantum.leap(Time.new(1974, 10, 24, 15, 00)) do
+    Quantum.leap(Time.new(1974, 10, 24)) do
       sam.must_be_kind_of(Boxer)
       sam.must_win_the_championship
     end
