@@ -28,6 +28,12 @@ end
 class Quantum
   def self.leap(time)
     QuantumLeap.mock_current_time(time)
+    return unless block_given?
+    begin
+      yield
+    ensure
+      QuantumLeap.reset
+    end
   end
 
   def self.leap_back
