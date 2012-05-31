@@ -1,5 +1,7 @@
 # QuantumLeap
 
+[![Build Status](https://secure.travis-ci.org/mattonrails/quantum_leap.png?branch=master)](http://travis-ci.org/mattonrails/quantum_leap)
+
 Righting wrongs in your test suite with time travel!
 
 QuantumLeap lets you change the current time in your tests.
