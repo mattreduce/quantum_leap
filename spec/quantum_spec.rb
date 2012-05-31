@@ -14,7 +14,7 @@ describe Quantum do
 
       it 'changes the current time' do
         Quantum.leap(the_past)
-        Time.now.must_be_close_to(the_past)
+        Time.now.must_be_within_delta(the_past, 1)
       end
     end
 
@@ -24,7 +24,7 @@ describe Quantum do
 
       it 'changes time only within the block' do
         Quantum.leap(the_past) do
-          Time.now.must_be_close_to(the_past)
+          Time.now.must_be_within_delta(the_past, 1)
         end
         Time.now.must_be_within_delta(the_present, 1)
       end
