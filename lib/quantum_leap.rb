@@ -26,7 +26,7 @@ class << Time
 end
 
 class Quantum
-  def self.leap(time)
+  def self.leap(time = Time.now)
     QuantumLeap.mock_current_time(time)
     return unless block_given?
     begin
