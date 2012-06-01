@@ -24,8 +24,6 @@ Or install it yourself as:
 
 ## Usage
 
-    require 'quantum_leap'
-
     Quantum.leap(Time.new(1956, 9, 13))
     sam.must_be_kind_of(Pilot)
     sam.must_win_baseball_game
@@ -37,6 +35,14 @@ Or with a block:
       sam.must_be_kind_of(Boxer)
       sam.must_win_the_championship
     end
+
+Defaults to Time.now without arguments:
+
+    Time.now
+     => 2012-05-31 21:25:34 -0400
+    Quantum.leap
+    Time.now
+     => 2012-05-31 21:25:36 -0400
 
 ## Contributing
 
