@@ -14,10 +14,6 @@ Add this line to your application's Gemfile:
 
     gem 'quantum_leap'
 
-And then execute:
-
-    $ bundle
-
 Or install it yourself as:
 
     $ gem install quantum_leap
