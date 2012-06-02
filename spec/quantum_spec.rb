@@ -16,6 +16,10 @@ describe Quantum do
         Quantum.leap(the_past)
         Time.now.must_be_within_delta(the_past, 1)
       end
+
+      it 'returns the time' do
+        Quantum.leap(the_past).must_be_kind_of(Time)
+      end
     end
 
     describe 'with a block' do
@@ -28,6 +32,10 @@ describe Quantum do
         end
         Time.now.must_be_within_delta(the_present, 1)
       end
+
+      it 'returns the time' do
+        Quantum.leap(the_past) {}.must_be_kind_of(Time)
+      end
     end
 
     describe 'with no argument' do
@@ -37,6 +45,10 @@ describe Quantum do
         it 'defaults to the current time' do
           Quantum.leap
           Time.now.must_be_within_delta(the_present, 1)
+        end
+
+        it 'returns the time' do
+          Quantum.leap.must_be_kind_of(Time)
         end
       end
 
@@ -48,6 +60,10 @@ describe Quantum do
             Time.now.must_be_within_delta(the_present, 1)
           end
           Time.now.must_be_within_delta(the_present, 1)
+        end
+
+        it 'returns the time' do
+          Quantum.leap {}.must_be_kind_of(Time)
         end
       end
     end
@@ -62,6 +78,10 @@ describe Quantum do
       Time.now.must_be_within_delta(the_past, 1)
       Quantum.leap_back
       Time.now.must_be_within_delta(the_present, 1)
+    end
+
+    it 'returns the time' do
+      Quantum.leap_back.must_be_kind_of(Time)
     end
   end
 
