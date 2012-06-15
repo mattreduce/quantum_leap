@@ -1,4 +1,5 @@
 require 'quantum_leap/version'
+require 'date'
 
 module QuantumLeap
   extend self
@@ -18,11 +19,20 @@ module QuantumLeap
   def now
     Time.really_now - time_travel_offsets.inject(0, :+)
   end
+
+  def date
+    now.to_date
+  end
 end
 
 class << Time
   alias_method :really_now, :now
   def now; QuantumLeap.now; end
+end
+
+class << Date
+  alias_method :really_today, :today
+  def today; QuantumLeap.date; end
 end
 
 class Quantum

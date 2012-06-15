@@ -17,6 +17,11 @@ describe Quantum do
         Time.now.must_be_within_delta(the_past, 1)
       end
 
+      it 'changes the current date' do
+        Quantum.leap(the_past)
+        Date.today.must_equal(the_past.to_date)
+      end
+
       it 'returns the time' do
         Quantum.leap(the_past).must_be_kind_of(Time)
       end
@@ -33,6 +38,13 @@ describe Quantum do
         Time.now.must_be_within_delta(the_present, 1)
       end
 
+      it 'changes date only within the block' do
+        Quantum.leap(the_past) do
+          Date.today.must_equal(the_past.to_date)
+        end
+        Date.today.must_equal(the_present.to_date)
+      end
+
       it 'returns the time' do
         Quantum.leap(the_past) {}.must_be_kind_of(Time)
       end
@@ -47,6 +59,11 @@ describe Quantum do
           Time.now.must_be_within_delta(the_present, 1)
         end
 
+        it 'defaults to the current date' do
+          Quantum.leap
+          Date.today.must_equal(the_present.to_date)
+        end
+
         it 'returns the time' do
           Quantum.leap.must_be_kind_of(Time)
         end
@@ -55,11 +72,18 @@ describe Quantum do
       describe 'with a block' do
         the_present = Time.new
 
-        it 'changes time only within the block' do
+        it 'does not change time in or outside block' do
           Quantum.leap do
             Time.now.must_be_within_delta(the_present, 1)
           end
           Time.now.must_be_within_delta(the_present, 1)
+        end
+
+        it 'does not change date in or outside block' do
+          Quantum.leap do
+            Date.today.must_equal(the_present.to_date)
+          end
+          Date.today.must_equal(the_present.to_date)
         end
 
         it 'returns the time' do
@@ -78,6 +102,13 @@ describe Quantum do
       Time.now.must_be_within_delta(the_past, 1)
       Quantum.leap_back
       Time.now.must_be_within_delta(the_present, 1)
+    end
+
+    it 'returns to the present date' do
+      Quantum.leap(the_past)
+      Date.today.must_equal(the_past.to_date)
+      Quantum.leap_back
+      Date.today.must_equal(the_present.to_date)
     end
 
     it 'returns the time' do
