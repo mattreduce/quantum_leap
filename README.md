@@ -20,25 +20,31 @@ Or install it yourself as:
 
 ## Usage
 
-    Quantum.leap(Time.new(1956, 9, 13))
-    sam.must_be_kind_of(Pilot)
-    sam.must_win_baseball_game
-    Quantum.leap_back
+```ruby
+Quantum.leap(Time.new(1956, 9, 13))
+sam.must_be_kind_of(Pilot)
+sam.must_win_baseball_game
+Quantum.leap_back
+```
 
 Or with a block:
 
-    Quantum.leap(Time.new(1974, 10, 24)) do
-      sam.must_be_kind_of(Boxer)
-      sam.must_win_the_championship
-    end
+```ruby
+Quantum.leap(Time.new(1974, 10, 24)) do
+  sam.must_be_kind_of(Boxer)
+  sam.must_win_the_championship
+end
+```
 
 Defaults to Time.now without arguments:
 
-    Time.now
-     => 2012-05-31 21:25:34 -0400
-    Quantum.leap
-    Time.now
-     => 2012-05-31 21:25:36 -0400
+```ruby
+Time.now
+=> 2012-05-31 21:25:34 -0400
+Quantum.leap
+Time.now
+=> 2012-05-31 21:25:36 -0400
+```
 
 ## Contributing
 
