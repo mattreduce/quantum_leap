@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>QuantumLeap by mattonrails</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>QuantumLeap</h1>
+        <p>Righting wrongs in your test suite with time travel!</p>
+        <p class="view"><a href="https://github.com/mattonrails/quantum_leap">View the Project on GitHub <small>mattonrails/quantum_leap</small></a></p>
+        <ul>
+          <li><a href="https://github.com/mattonrails/quantum_leap/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mattonrails/quantum_leap/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mattonrails/quantum_leap">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>QuantumLeap lets you change the current time in your tests.</p>
+
+<p>I can't promise you'll meet any historical figures, however.</p>
+
+<h2>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'quantum_leap'
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install quantum_leap
+</code></pre>
+
+<h2>Usage</h2>
+
+<div class="highlight">
+<pre><span class="no">Quantum</span><span class="o">.</span><span class="n">leap</span><span class="p">(</span><span class="no">Time</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1956</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+<span class="n">sam</span><span class="o">.</span><span class="n">must_be_kind_of</span><span class="p">(</span><span class="no">Pilot</span><span class="p">)</span>
+<span class="n">sam</span><span class="o">.</span><span class="n">must_win_baseball_game</span>
+<span class="no">Quantum</span><span class="o">.</span><span class="n">leap_back</span>
+</pre>
+</div>
+
+
+<p>Or with a block:</p>
+
+<div class="highlight">
+<pre><span class="no">Quantum</span><span class="o">.</span><span class="n">leap</span><span class="p">(</span><span class="no">Time</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1974</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span> <span class="k">do</span>
+  <span class="n">sam</span><span class="o">.</span><span class="n">must_be_kind_of</span><span class="p">(</span><span class="no">Boxer</span><span class="p">)</span>
+  <span class="n">sam</span><span class="o">.</span><span class="n">must_win_the_championship</span>
+<span class="k">end</span>
+</pre>
+</div>
+
+
+<p>Defaults to Time.now without arguments:</p>
+
+<div class="highlight">
+<pre><span class="no">Time</span><span class="o">.</span><span class="n">now</span>
+<span class="o">=&gt;</span> <span class="mi">2012</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">31</span> <span class="mi">21</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mi">34</span> <span class="o">-</span><span class="mo">0400</span>
+<span class="no">Quantum</span><span class="o">.</span><span class="n">leap</span>
+<span class="no">Time</span><span class="o">.</span><span class="n">now</span>
+<span class="o">=&gt;</span> <span class="mi">2012</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">31</span> <span class="mi">21</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mi">36</span> <span class="o">-</span><span class="mo">0400</span>
+</pre>
+</div>
+
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/mattonrails">mattonrails</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
