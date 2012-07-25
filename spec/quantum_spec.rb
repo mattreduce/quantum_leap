@@ -52,16 +52,16 @@ describe Quantum do
 
     describe 'with no argument' do
       describe 'without a block' do
-        the_present = Time.new
+        the_past = Time.new(1956, 9, 13, 15, 00)
 
         it 'defaults to the current time' do
           Quantum.leap
-          Time.now.must_be_within_delta(the_present, 1)
+          Time.now.must_be_within_delta(the_past, 1)
         end
 
         it 'defaults to the current date' do
           Quantum.leap
-          Date.today.must_equal(the_present.to_date)
+          Date.today.must_equal(the_past.to_date)
         end
 
         it 'returns the time' do
@@ -70,20 +70,20 @@ describe Quantum do
       end
 
       describe 'with a block' do
-        the_present = Time.new
+        the_past = Time.new(1956, 9, 13, 15, 00)
 
         it 'does not change time in or outside block' do
           Quantum.leap do
-            Time.now.must_be_within_delta(the_present, 1)
+            Time.now.must_be_within_delta(the_past, 1)
           end
-          Time.now.must_be_within_delta(the_present, 1)
+          Time.now.must_be_within_delta(the_past, 1)
         end
 
         it 'does not change date in or outside block' do
           Quantum.leap do
-            Date.today.must_equal(the_present.to_date)
+            Date.today.must_equal(the_past.to_date)
           end
-          Date.today.must_equal(the_present.to_date)
+          Date.today.must_equal(the_past.to_date)
         end
 
         it 'returns the time' do

@@ -36,7 +36,9 @@ class << Date
 end
 
 class Quantum
-  def self.leap(time = Time.now)
+  INITIAL_LEAP = Time.new(1956, 9, 13, 15, 00)
+
+  def self.leap(time = INITIAL_LEAP)
     QuantumLeap.mock_current_time(time)
     if block_given?
       begin
