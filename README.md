@@ -36,16 +36,6 @@ Quantum.leap(Time.new(1974, 10, 24)) do
 end
 ```
 
-Defaults to Time.now without arguments:
-
-```ruby
-Time.now
-=> 2012-05-31 21:25:34 -0400
-Quantum.leap
-Time.now
-=> 2012-05-31 21:25:36 -0400
-```
-
 ## Contributing
 
 1. Fork it
