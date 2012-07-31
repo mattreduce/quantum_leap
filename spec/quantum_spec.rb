@@ -70,20 +70,21 @@ describe Quantum do
       end
 
       describe 'with a block' do
+        the_present = Time.now
         the_past = Time.new(1956, 9, 13, 15, 00)
 
-        it 'does not change time in or outside block' do
+        it 'only changes time within the block' do
           Quantum.leap do
             Time.now.must_be_within_delta(the_past, 1)
           end
-          Time.now.must_be_within_delta(the_past, 1)
+          Time.now.must_be_within_delta(the_present, 1)
         end
 
-        it 'does not change date in or outside block' do
+        it 'only changes date within the block' do
           Quantum.leap do
             Date.today.must_equal(the_past.to_date)
           end
-          Date.today.must_equal(the_past.to_date)
+          Date.today.must_equal(the_present.to_date)
         end
 
         it 'returns the time' do
