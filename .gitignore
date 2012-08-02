@@ -3,6 +3,7 @@
 .bundle
 .config
 .rbx
+.rbenv-version
 .rvmrc
 .yardoc
 Gemfile.lock
