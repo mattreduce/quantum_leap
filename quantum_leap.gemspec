@@ -16,5 +16,4 @@ Gem::Specification.new do |gem|
   gem.version       = QuantumLeap::VERSION
 
   gem.add_development_dependency("rake")
-  gem.add_development_dependency("minitest-colorize")
 end
