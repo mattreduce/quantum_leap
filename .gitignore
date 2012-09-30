@@ -3,6 +3,7 @@
 .bundle
 .config
 .rbx
+.rbenv-gemsets
 .rbenv-version
 .rvmrc
 .yardoc
