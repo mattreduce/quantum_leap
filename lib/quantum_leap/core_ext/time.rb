@@ -1,4 +1,4 @@
 class << Time
   alias_method :really_now, :now
-  def now; QuantumLeap.now; end
+  def now; QuantumLeap::Accelerator.now; end
 end
