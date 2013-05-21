@@ -14,9 +14,6 @@ require 'quantum_leap'
 #     puts Time.now
 #   end
 class Quantum
-  # Internal: Default time to replace the real current time with.
-  INITIAL_LEAP = Time.new(1956, 9, 13, 15, 00)
-
   # Public: Change the current time to a specific point in the past or future.
   # You can change the time temporarily by specifying a block; time is
   # unchanged outside the context of the block.
@@ -33,7 +30,7 @@ class Quantum
   #   end
   #
   # Returns the current time.
-  def self.leap(time = INITIAL_LEAP)
+  def self.leap(time = QuantumLeap::INITIAL_LEAP)
     QuantumLeap::Accelerator.mock_current_time(time)
     if block_given?
       begin
