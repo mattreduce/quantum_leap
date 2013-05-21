@@ -1,5 +1,7 @@
 require 'quantum_leap/version'
-require 'date'
+
+require 'quantum_leap/core_ext/date'
+require 'quantum_leap/core_ext/time'
 
 module QuantumLeap
   extend self
@@ -23,16 +25,6 @@ module QuantumLeap
   def date
     now.to_date
   end
-end
-
-class << Time
-  alias_method :really_now, :now
-  def now; QuantumLeap.now; end
-end
-
-class << Date
-  alias_method :really_today, :today
-  def today; QuantumLeap.date; end
 end
 
 class Quantum
