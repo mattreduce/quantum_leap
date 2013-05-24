@@ -1,7 +1,7 @@
 # QuantumLeap
 
 [![Build Status](https://secure.travis-ci.org/mattonrails/quantum_leap.png?branch=master)](http://travis-ci.org/mattonrails/quantum_leap)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/mattonrails/quantum_leap)
+[![Code Climate](https://codeclimate.com/github/mattonrails/quantum_leap.png)](https://codeclimate.com/github/mattonrails/quantum_leap)
 
 Righting wrongs in your test suite with time travel!
 
