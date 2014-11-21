@@ -1,7 +1,7 @@
 # QuantumLeap
 
 [![Build Status](https://travis-ci.org/mattreduce/quantum_leap.svg?branch=master)](https://travis-ci.org/mattreduce/quantum_leap)
-[![Code Climate](https://codeclimate.com/github/mattonrails/quantum_leap.png)](https://codeclimate.com/github/mattonrails/quantum_leap)
+[![Code Climate](https://codeclimate.com/github/mattreduce/quantum_leap/badges/gpa.svg)](https://codeclimate.com/github/mattreduce/quantum_leap)
 
 Righting wrongs in your test suite with time travel!
 
