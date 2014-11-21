@@ -3,7 +3,7 @@ require File.expand_path('../lib/quantum_leap/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Matthew Conway"]
-  gem.email         = ["mattonrails@shortmail.com"]
+  gem.email         = ["himself@mattonrails.com"]
   gem.description   = %q{Righting wrongs in your test suite with time travel!}
   gem.summary       = %q{Lets you change the current time in your tests}
   gem.homepage      = "https://mattreduce.github.io/quantum_leap/"
