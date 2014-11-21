@@ -17,5 +17,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = QuantumLeap::VERSION
 
+  gem.add_development_dependency("minitest")
   gem.add_development_dependency("rake")
 end
