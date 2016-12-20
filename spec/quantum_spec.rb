@@ -13,11 +13,13 @@ describe Quantum do
       the_past    = Time.new(1956, 9, 13, 15, 00)
 
       it 'changes the current time' do
+        Time.now.must_be_within_delta(the_present, 1)
         Quantum.leap(the_past)
         Time.now.must_be_within_delta(the_past, 1)
       end
 
       it 'changes the current date' do
+        Date.today.must_equal(the_present.to_date)
         Quantum.leap(the_past)
         Date.today.must_equal(the_past.to_date)
       end
