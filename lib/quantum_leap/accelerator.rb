@@ -1,5 +1,3 @@
-require 'quantum_leap'
-
 module QuantumLeap
   # Internal: The main module for methods that manipulate time, and provide
   # interfaces to the custom time.
